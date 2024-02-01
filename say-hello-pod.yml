@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: say-hello
+spec:
+  containers:
+    - name: say-hello-container
+      image: 127.0.0.1:5000/say-hello:latest

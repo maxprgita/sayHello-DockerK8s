@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  myapp:
+    #image: localhost:5000/say-hello  # Aggiorna il nome dell'immagine con l'indirizzo del tuo registro Docker locale
+    image: 192.168.2.106:5000/say-hello  
+    ports:
+      - "8090:8080"
+    networks:
+      - mynetwork
+    command: java -jar sayHello.jar
+
+networks:
+  mynetwork:
+    driver: bridge
+
